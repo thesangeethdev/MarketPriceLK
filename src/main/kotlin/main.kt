@@ -11,6 +11,7 @@ fun main() = runBlocking {
 
     val pdfPath = "price_report_20260722_e.pdf"
     val rawText = extractTextFromPdf(pdfPath)
+//    println(rawText)
 
     val report = extractPriceData(rawText)
 

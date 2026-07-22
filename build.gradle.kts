@@ -29,4 +29,6 @@ dependencies {
     implementation("org.apache.pdfbox:pdfbox:3.0.3")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.11.0")
 
+    implementation("technology.tabula:tabula:1.0.5")
+
 }

@@ -1,5 +1,5 @@
 {
-  "reportDate": "22 July 2026",
+  "reportDate": "2026-07-22",
   "sections": [
     {
       "sectionName": "Vegetables",
@@ -255,7 +255,12 @@
             "yesterday": 700.0,
             "today": 600.0
           }
-        },
+        }
+      ]
+    },
+    {
+      "sectionName": "Other",
+      "items": [
         {
           "item": "Red Onion (Local)",
           "unit": "Rs./kg",
@@ -451,12 +456,7 @@
             "yesterday": 1240.0,
             "today": 1240.0
           }
-        }
-      ]
-    },
-    {
-      "sectionName": "Other",
-      "items": [
+        },
         {
           "item": "Coconut (Avg.)",
           "unit": "Rs./Nut",
@@ -494,14 +494,14 @@
               "today": 802.0
             },
             "dambulla": {
-              "yesterday": 884.0,
-              "today": 884.0
+              "yesterday": null,
+              "today": null
             }
           },
           "retail": {
             "pettah": {
-              "yesterday": 852.0,
-              "today": 852.0
+              "yesterday": 884.0,
+              "today": 884.0
             },
             "dambulla": {
               "yesterday": null,
@@ -509,8 +509,8 @@
             }
           },
           "narahenpita": {
-            "yesterday": null,
-            "today": null
+            "yesterday": 852.0,
+            "today": 852.0
           }
         },
         {
@@ -522,14 +522,14 @@
               "today": 230.0
             },
             "dambulla": {
-              "yesterday": 247.0,
-              "today": 247.0
+              "yesterday": null,
+              "today": null
             }
           },
           "retail": {
             "pettah": {
-              "yesterday": 260.0,
-              "today": 260.0
+              "yesterday": 247.0,
+              "today": 247.0
             },
             "dambulla": {
               "yesterday": null,
@@ -537,8 +537,8 @@
             }
           },
           "narahenpita": {
-            "yesterday": null,
-            "today": null
+            "yesterday": 260.0,
+            "today": 260.0
           }
         },
         {
@@ -550,14 +550,70 @@
               "today": 209.0
             },
             "dambulla": {
-              "yesterday": 225.0,
-              "today": 225.0
+              "yesterday": null,
+              "today": null
             }
           },
           "retail": {
             "pettah": {
-              "yesterday": 220.0,
-              "today": 220.0
+              "yesterday": 225.0,
+              "today": 225.0
+            },
+            "dambulla": {
+              "yesterday": null,
+              "today": null
+            }
+          },
+          "narahenpita": {
+            "yesterday": 220.0,
+            "today": 220.0
+          }
+        },
+        {
+          "item": "Egg (White)",
+          "unit": "Rs./Each",
+          "wholesale": {
+            "pettah": {
+              "yesterday": 40.0,
+              "today": 39.0
+            },
+            "dambulla": {
+              "yesterday": null,
+              "today": null
+            }
+          },
+          "retail": {
+            "pettah": {
+              "yesterday": 41.0,
+              "today": 41.0
+            },
+            "dambulla": {
+              "yesterday": null,
+              "today": null
+            }
+          },
+          "narahenpita": {
+            "yesterday": 44.0,
+            "today": 44.0
+          }
+        },
+        {
+          "item": "Katta (Imp)",
+          "unit": "Rs./kg",
+          "wholesale": {
+            "pettah": {
+              "yesterday": 2138.0,
+              "today": 2213.0
+            },
+            "dambulla": {
+              "yesterday": null,
+              "today": null
+            }
+          },
+          "retail": {
+            "pettah": {
+              "yesterday": 2817.0,
+              "today": 2850.0
             },
             "dambulla": {
               "yesterday": null,
@@ -570,22 +626,22 @@
           }
         },
         {
-          "item": "Egg (White)",
-          "unit": "Rs./Each",
+          "item": "Sprat (Imp)",
+          "unit": "Rs./kg",
           "wholesale": {
             "pettah": {
-              "yesterday": 40.0,
-              "today": 39.0
+              "yesterday": 1330.0,
+              "today": 1370.0
             },
             "dambulla": {
-              "yesterday": 41.0,
-              "today": 41.0
+              "yesterday": null,
+              "today": null
             }
           },
           "retail": {
             "pettah": {
-              "yesterday": 44.0,
-              "today": 44.0
+              "yesterday": 1625.0,
+              "today": 1600.0
             },
             "dambulla": {
               "yesterday": null,
@@ -593,8 +649,8 @@
             }
           },
           "narahenpita": {
-            "yesterday": null,
-            "today": null
+            "yesterday": 1600.0,
+            "today": 1600.0
           }
         }
       ]
@@ -691,8 +747,8 @@
           "unit": "Rs./Each",
           "wholesale": {
             "pettah": {
-              "yesterday": 195.0,
-              "today": 195.0
+              "yesterday": null,
+              "today": null
             },
             "dambulla": {
               "yesterday": null,
@@ -701,8 +757,8 @@
           },
           "retail": {
             "pettah": {
-              "yesterday": 250.0,
-              "today": 250.0
+              "yesterday": 195.0,
+              "today": 195.0
             },
             "dambulla": {
               "yesterday": null,
@@ -710,14 +766,24 @@
             }
           },
           "narahenpita": {
-            "yesterday": null,
-            "today": null
+            "yesterday": 250.0,
+            "today": 250.0
           }
         },
         {
           "item": "Orange (Imp)",
           "unit": "Rs./Each",
           "wholesale": {
+            "pettah": {
+              "yesterday": null,
+              "today": null
+            },
+            "dambulla": {
+              "yesterday": null,
+              "today": null
+            }
+          },
+          "retail": {
             "pettah": {
               "yesterday": 180.0,
               "today": 180.0
@@ -727,19 +793,9 @@
               "today": null
             }
           },
-          "retail": {
-            "pettah": {
-              "yesterday": 250.0,
-              "today": 250.0
-            },
-            "dambulla": {
-              "yesterday": null,
-              "today": null
-            }
-          },
           "narahenpita": {
-            "yesterday": null,
-            "today": null
+            "yesterday": 250.0,
+            "today": 250.0
           }
         }
       ]
@@ -878,13 +934,13 @@
               "today": 253.0
             },
             "dambulla": {
-              "yesterday": 240.0,
-              "today": 240.0
+              "yesterday": null,
+              "today": null
             }
           },
           "narahenpita": {
-            "yesterday": null,
-            "today": null
+            "yesterday": 240.0,
+            "today": 240.0
           }
         },
         {
@@ -963,17 +1019,17 @@
           },
           "retail": {
             "pettah": {
-              "yesterday": 1980.0,
-              "today": 1980.0
+              "yesterday": null,
+              "today": null
             },
             "dambulla": {
-              "yesterday": 2980.0,
-              "today": 2980.0
+              "yesterday": 1980.0,
+              "today": 1980.0
             }
           },
           "narahenpita": {
-            "yesterday": null,
-            "today": null
+            "yesterday": 2980.0,
+            "today": 2980.0
           }
         },
         {
@@ -991,17 +1047,17 @@
           },
           "retail": {
             "pettah": {
-              "yesterday": 2840.0,
-              "today": 2840.0
+              "yesterday": null,
+              "today": null
             },
             "dambulla": {
               "yesterday": null,
-              "today": 3280.0
+              "today": 2840.0
             }
           },
           "narahenpita": {
             "yesterday": null,
-            "today": null
+            "today": 3280.0
           }
         },
         {
@@ -1019,17 +1075,17 @@
           },
           "retail": {
             "pettah": {
-              "yesterday": 1280.0,
-              "today": 1050.0
+              "yesterday": null,
+              "today": null
             },
             "dambulla": {
-              "yesterday": 1560.0,
-              "today": 1280.0
+              "yesterday": 1280.0,
+              "today": 1050.0
             }
           },
           "narahenpita": {
-            "yesterday": null,
-            "today": null
+            "yesterday": 1560.0,
+            "today": 1280.0
           }
         },
         {
@@ -1047,17 +1103,17 @@
           },
           "retail": {
             "pettah": {
-              "yesterday": 2700.0,
+              "yesterday": null,
               "today": null
             },
             "dambulla": {
-              "yesterday": 2160.0,
-              "today": 2040.0
+              "yesterday": 2700.0,
+              "today": null
             }
           },
           "narahenpita": {
-            "yesterday": null,
-            "today": null
+            "yesterday": 2160.0,
+            "today": 2040.0
           }
         },
         {
@@ -1075,17 +1131,17 @@
           },
           "retail": {
             "pettah": {
-              "yesterday": 1040.0,
-              "today": 1050.0
+              "yesterday": null,
+              "today": null
             },
             "dambulla": {
-              "yesterday": null,
-              "today": 1060.0
+              "yesterday": 1040.0,
+              "today": 1050.0
             }
           },
           "narahenpita": {
             "yesterday": null,
-            "today": null
+            "today": 1060.0
           }
         },
         {
@@ -1103,12 +1159,12 @@
           },
           "retail": {
             "pettah": {
-              "yesterday": 1640.0,
-              "today": 1320.0
-            },
-            "dambulla": {
               "yesterday": null,
               "today": null
+            },
+            "dambulla": {
+              "yesterday": 1640.0,
+              "today": 1320.0
             }
           },
           "narahenpita": {
@@ -1131,21 +1187,21 @@
           },
           "retail": {
             "pettah": {
-              "yesterday": 1060.0,
-              "today": 980.0
+              "yesterday": null,
+              "today": null
             },
             "dambulla": {
-              "yesterday": 980.0,
-              "today": 1040.0
+              "yesterday": 1060.0,
+              "today": 980.0
             }
           },
           "narahenpita": {
-            "yesterday": null,
-            "today": null
+            "yesterday": 980.0,
+            "today": 1040.0
           }
         }
       ]
     }
   ],
-  "summary": "Yesterday Today\nPrice of Beans declined in \nDambulla market compared to \nyesterday due to availability of low \nquality varieties from \nThambuttegama and Matale areas.\nq Dambulla : 380.00 200.00\nPrice of Carrot declined in \nDambulla market compared to \nyesterday due to favourable supply \nfrom Nuwara Eliya area.\nq Dambulla : 310.00 255.00\nPrice of Brinjal declined in \nDambulla market compared to \nyesterday due to availability of low \nquality varieties from Dambulla \narea.\nq Dambulla : 370.00 280.00\nPrice of Green Chilli declined in \nboth Pettah and Dambulla markets \ncompared to yesterday due to \nfavourable supply from Jaffna/ \nPuttalam and Galewela/ Sigiriya \nareas, respectively.\nq\nPettah :\nDambulla :\n1,300.00\n1,280.00\n1,200.00\n1,130.00\nWholesale price of Kelawalla \nincreased in Peliyagoda fish market \ncompared to yesterday due to \navailability of a larger variety from \nSouthern coastal area.\np Peliyagoda : 1,700.00 1,900.00\nWholesale price of Imported Red \nOnion increased in both Pettah and \nDambulla markets compared to \nyesterday due to availability of \nhigh quality Indian varieties.\np\nPettah :\nDambulla :\n260.00\n205.00\n280.00\n225.00\nPrice of Imported Potato increased \nfurther in Dambulla market \ncompared to yesterday due to \navailability of high quality Iranian \nvarieties.\np Dambulla : 185.00 195.00"
+  "summary": null
 }
