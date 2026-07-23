@@ -15,8 +15,10 @@ fun main() = runBlocking {
 
     val report = extractPriceData(rawText)
 
-    val jsonString = Json.encodeToString(report)
-    File("output.json").writeText(jsonString)
+    val finalJson = report.toRenamedJson()
+
+//    val jsonString = Json.encodeToString(report)
+    File("output.json").writeText(finalJson)
 //    println("Report date: ${report.reportDate}")
 //    println("Summary: ${report.summary ?: "No Summary"} ")
 //    report.sections.forEach { section ->

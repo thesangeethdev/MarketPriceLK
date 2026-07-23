@@ -10,7 +10,7 @@ fun extractTextFromPdf(filepath: String): String {
     return document.use { document ->
         var stripper = PDFTextStripper().apply {
             sortByPosition = true
-            startPage = 2
+//            startPage = 2
         }
         val raw = stripper.getText(document)
         val cleaned = raw.replace(Regex("""(?<=\d)\s+(?=\d)"""), "")
