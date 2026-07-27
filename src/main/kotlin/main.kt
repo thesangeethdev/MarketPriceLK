@@ -9,14 +9,15 @@ import java.io.File
 
 fun main() = runBlocking {
 
-    val pdfPath = "price_report_20260722_e.pdf"
-    val rawText = extractTextFromPdf(pdfPath)
-//    println(rawText)
+//    val pdfPath = "price_report_20260722_e.pdf"
+//    val rawText = extractTextFromPdf(pdfPath)
+////    println(rawText)
+//
+//    val report = extractPriceData(rawText)
+//
+//    val finalJson = report.toRenamedJson()
+//
+//    File("output.json").writeText(finalJson)
 
-    val report = extractPriceData(rawText)
-
-    val finalJson = report.toRenamedJson()
-
-    File("output.json").writeText(finalJson)
-
+    fetchAndProcessToday()
 }
