@@ -10,7 +10,7 @@ import io.ktor.http.HttpStatusCode
 
 suspend fun fetchPdfForDate(date: LocalDate): ByteArray?{
     var dateStr = date.format(DateTimeFormatter.ofPattern("yyyyMMdd"))
-    val url = "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/statistics/pricerpt/price_report_${date}_e.pdf"
+    val url = "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/statistics/pricerpt/price_report_${dateStr}_e.pdf"
 
     val client = HttpClient()
     try {

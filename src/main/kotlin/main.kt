@@ -19,5 +19,8 @@ fun main() = runBlocking {
 //
 //    File("output.json").writeText(finalJson)
 
+//    fetchAndProcessToday()
+    println("Starting backfill for last 3 days...")
     fetchAndProcessToday()
+    println("Backfill complete. Check the 'data/' folder for the saved JSONs.")
 }
