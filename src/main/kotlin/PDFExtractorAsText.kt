@@ -31,3 +31,8 @@ fun extractTextFromPdf(pdfBytes: ByteArray): String {
 
 
 }
+
+//fun extractTextFromPdf(filepath: String): String {
+//    val bytes = File(filepath).readBytes()
+//    return extractTextFromPdf(bytes)
+//}

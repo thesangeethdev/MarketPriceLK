@@ -60,7 +60,20 @@ fun PriceReport.toRenamedJson(): String {
             if (narahenpitaObj != null){
                 retailObj["narahenpita"] = narahenpitaObj
             }
-            itemObj["retail"] = JsonObject(retailObj)
+
+            val finalRetailObj = if (sectionName.equals("Fish", ignoreCase = true)) {
+                // desired order: negombo, narahenpita, pettah
+                val orderedMap = linkedMapOf(
+                    "negombo" to retailObj["negombo"],
+                    "narahenpita" to retailObj["narahenpita"],
+                    "pettah" to retailObj["pettah"]
+                ).filterValues { it != null }.mapValues { (_, v) -> v!! }
+                JsonObject(orderedMap)
+            } else {
+                JsonObject(retailObj)
+            }
+
+            itemObj["retail"] = finalRetailObj
             JsonObject(itemObj)
         }
         val newSection = sectionObj.toMutableMap()

@@ -1019,10 +1019,6 @@
                         }
                     },
                     "retail": {
-                        "pettah": {
-                            "yesterday": null,
-                            "today": null
-                        },
                         "negombo": {
                             "yesterday": 1980.0,
                             "today": 1980.0
@@ -1030,6 +1026,10 @@
                         "narahenpita": {
                             "yesterday": 2340.0,
                             "today": 2980.0
+                        },
+                        "pettah": {
+                            "yesterday": null,
+                            "today": null
                         }
                     }
                 },
@@ -1047,16 +1047,16 @@
                         }
                     },
                     "retail": {
-                        "pettah": {
-                            "yesterday": null,
-                            "today": null
-                        },
                         "negombo": {
                             "yesterday": 2840.0,
                             "today": 2840.0
                         },
                         "narahenpita": {
                             "yesterday": 2980.0,
+                            "today": null
+                        },
+                        "pettah": {
+                            "yesterday": null,
                             "today": null
                         }
                     }
@@ -1075,17 +1075,17 @@
                         }
                     },
                     "retail": {
-                        "pettah": {
-                            "yesterday": null,
-                            "today": null
-                        },
                         "negombo": {
                             "yesterday": 1280.0,
                             "today": 1560.0
                         },
                         "narahenpita": {
                             "yesterday": 1560.0,
-                            "today": 1560.0
+                            "today": null
+                        },
+                        "pettah": {
+                            "yesterday": null,
+                            "today": null
                         }
                     }
                 },
@@ -1103,17 +1103,17 @@
                         }
                     },
                     "retail": {
-                        "pettah": {
-                            "yesterday": null,
-                            "today": null
-                        },
                         "negombo": {
                             "yesterday": 2700.0,
                             "today": 1480.0
                         },
                         "narahenpita": {
                             "yesterday": 2160.0,
-                            "today": 2160.0
+                            "today": null
+                        },
+                        "pettah": {
+                            "yesterday": null,
+                            "today": null
                         }
                     }
                 },
@@ -1131,15 +1131,15 @@
                         }
                     },
                     "retail": {
-                        "pettah": {
-                            "yesterday": null,
-                            "today": null
-                        },
                         "negombo": {
                             "yesterday": 1080.0,
                             "today": 1040.0
                         },
                         "narahenpita": {
+                            "yesterday": null,
+                            "today": null
+                        },
+                        "pettah": {
                             "yesterday": null,
                             "today": null
                         }
@@ -1159,15 +1159,15 @@
                         }
                     },
                     "retail": {
-                        "pettah": {
-                            "yesterday": null,
-                            "today": null
-                        },
                         "negombo": {
                             "yesterday": 1640.0,
                             "today": 1640.0
                         },
                         "narahenpita": {
+                            "yesterday": null,
+                            "today": null
+                        },
+                        "pettah": {
                             "yesterday": null,
                             "today": null
                         }
@@ -1187,10 +1187,6 @@
                         }
                     },
                     "retail": {
-                        "pettah": {
-                            "yesterday": null,
-                            "today": null
-                        },
                         "negombo": {
                             "yesterday": 1000.0,
                             "today": 1060.0
@@ -1198,6 +1194,10 @@
                         "narahenpita": {
                             "yesterday": 1040.0,
                             "today": 980.0
+                        },
+                        "pettah": {
+                            "yesterday": null,
+                            "today": null
                         }
                     }
                 }
