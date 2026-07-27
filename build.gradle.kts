@@ -30,5 +30,8 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.11.0")
 
     implementation("technology.tabula:tabula:1.0.5")
+    implementation("io.ktor:ktor-client-okhttp:3.0.0")
+    implementation("io.ktor:ktor-client-content-negotiation:3.0.0")
+    implementation("io.ktor:ktor-serialization-kotlinx-json:3.0.0")
 
 }

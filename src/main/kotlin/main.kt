@@ -17,15 +17,6 @@ fun main() = runBlocking {
 
     val finalJson = report.toRenamedJson()
 
-//    val jsonString = Json.encodeToString(report)
     File("output.json").writeText(finalJson)
-//    println("Report date: ${report.reportDate}")
-//    println("Summary: ${report.summary ?: "No Summary"} ")
-//    report.sections.forEach { section ->
-//        println("\n${section.sectionName}")
-//        section.items.forEach { item ->
-//            val today = item.retail.pettah.today
-//            println("   ${item.item}: ${item.unit} | Pettah retail todat: $today")
-//        }
-//    }
+
 }
