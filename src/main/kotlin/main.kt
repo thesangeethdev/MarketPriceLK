@@ -39,6 +39,6 @@ fun main() = runBlocking {
 
 //    fetchAndProcessToday()
     println("Starting backfill for last 3 days...")
-    processDate(LocalDate.of(2026, 7, 21))
+    processDate(LocalDate.of(2026, 7, 24))
     println("Backfill complete. Check the 'data/' folder for the saved JSONs.")
 }

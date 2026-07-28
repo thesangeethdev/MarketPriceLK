@@ -1,8 +1,6 @@
 package com.sangeeth
 
 import kotlinx.serialization.Serializable
-import javax.xml.crypto.Data
-
 
 @Serializable
 data class PriceReport(
@@ -21,15 +19,8 @@ data class Section(
 data class Item(
     val item: String,
     val unit: String,
-    val wholesale: Market,
-    val retail: Market,
-    val narahenpita: DayPair
-)
-
-@Serializable
-data class Market(
-    val pettah: DayPair,
-    val dambulla: DayPair
+    val wholesale: Map<String, DayPair?>,
+    val retail: Map<String, DayPair?>
 )
 
 @Serializable
@@ -37,5 +28,3 @@ data class DayPair(
     val yesterday: Double?,
     val today: Double?
 )
-
-

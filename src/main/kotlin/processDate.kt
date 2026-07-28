@@ -1,3 +1,27 @@
+//package com.sangeeth
+//
+//
+//import kotlinx.serialization.json.Json
+//import toRenamedJson
+//import java.time.LocalDate
+//
+//suspend fun processDate(date: LocalDate) {
+//    println("Fetching report for $date...")
+//    val pdf = fetchPdfForDate(date)
+//    if (pdf == null) {
+//        println("No PDF found for $date")
+//        return
+//    }
+//    val rawText = extractTextFromPdf(pdf)
+//    val report = extractPriceData(rawText)
+//    val finalJson = report.toRenamedJson()
+//    saveReport(date, finalJson)
+//    cleanupOldReports()
+//    println("✅ Saved report for $date")
+//}
+//
+
+
 package com.sangeeth
 
 import java.time.LocalDate
@@ -9,10 +33,12 @@ suspend fun processDate(date: LocalDate) {
         println("No PDF found for $date")
         return
     }
-    val rawText = extractTextFromPdf(pdf)
-    val report = extractPriceData(rawText)
-    val finalJson = report.toRenamedJson()
+
+    val report = parsePriceReport(pdf, date.toString())
+    val finalJson = report.toJson()
+
     saveReport(date, finalJson)
     cleanupOldReports()
-    println("✅ Saved report for $date")
+
+    println("Saved report for $date")
 }

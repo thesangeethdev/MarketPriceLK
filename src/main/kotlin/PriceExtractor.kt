@@ -334,7 +334,7 @@ You are an expert data extractor. You are given the full text of a daily price r
 
 **SUMMARY EXTRACTION INSTRUCTION:**
 - The PDF has a **summary section** on the first page – a narrative text describing price movements for various commodities in plain English. It typically starts with a title like "A Summary of Price Developments" or "Price Summary".
-- **Your task:** Extract the **entire narrative summary** as a single string, excluding the title itself. Include all descriptive sentences that explain price changes (e.g., "Price of Beans declined ... due to ..."). 
+- **Your task:** Extract the **entire narrative summary** as a single string, excluding the title itself. Include all descriptive sentences that explain price changes (e.g., "Price of Beans declined ... due to ...").
 - If there is no summary, return `null`.
 - **Ignore** any numerical data or table‑like content that may appear on the first page – only capture the natural‑language sentences.
 
@@ -378,8 +378,8 @@ Fish (8): Kelawalla, Thalapath, Balaya, Paraw, Salaya, Hurulla, Linna
 
 ### 1. OTHER SECTION
 
-For the following items, the numbers appear in this order:  
-**Wholesale Pettah (2) → Retail Pettah (2) → Narahenpita (2)**  
+For the following items, the numbers appear in this order:
+**Wholesale Pettah (2) → Retail Pettah (2) → Narahenpita (2)**
 All Dambulla columns (positions 3,4,7,8) are **null**.
 
 Items:
@@ -390,7 +390,7 @@ Items:
 - Katta (Imp)
 - Sprat (Imp)
 
-Example: `Coconut oil Rs./Ltr 802.00 802.00 884.00 884.00 852.00 852.00`  
+Example: `Coconut oil Rs./Ltr 802.00 802.00 884.00 884.00 852.00 852.00`
 Mapping:
 - Pos 1-2: 802.0, 802.0 → wholesale.pettah
 - Pos 3-4: null, null → wholesale.dambulla
@@ -402,15 +402,15 @@ Mapping:
 
 ### 2. FRUITS SECTION
 
-For the following items, the numbers appear in this order:  
-**Retail Pettah (2) → Narahenpita (2)**  
+For the following items, the numbers appear in this order:
+**Retail Pettah (2) → Narahenpita (2)**
 All wholesale columns (positions 1-4) and retail.dambulla (positions 7-8) are **null**.
 
 Items:
 - Apple (Imp)
 - Orange (Imp)
 
-Example: `Apple (Imp) Rs./Each 195.00 195.00 250.00 250.00`  
+Example: `Apple (Imp) Rs./Each 195.00 195.00 250.00 250.00`
 Mapping:
 - Pos 1-4: null, null, null, null → wholesale (pettah & dambulla)
 - Pos 5-6: 195.0, 195.0 → retail.pettah
@@ -421,11 +421,11 @@ Mapping:
 
 ### 3. RICE SECTION
 
-For imported Rice items (Ponni Samba (Imp), Nadu (Imp), Kekulu (White) (Imp)), the numbers appear in this order:  
-**Wholesale Pettah (2) → Retail Pettah (2) → Narahenpita (2)**  
+For imported Rice items (Ponni Samba (Imp), Nadu (Imp), Kekulu (White) (Imp)), the numbers appear in this order:
+**Wholesale Pettah (2) → Retail Pettah (2) → Narahenpita (2)**
 All Dambulla columns (positions 3,4,7,8) are **null**.
 
-Example: `Ponni Samba (Imp) Rs./kg 237.00 235.00 n.a. n.a. 250.00 253.00 240.00 240.00`  
+Example: `Ponni Samba (Imp) Rs./kg 237.00 235.00 n.a. n.a. 250.00 253.00 240.00 240.00`
 Mapping:
 - Pos 1-2: 237.0, 235.0 → wholesale.pettah
 - Pos 3-4: null, null → wholesale.dambulla (Marandagahamula)
@@ -436,23 +436,26 @@ Mapping:
 For the other Rice items (Samba, Nadu, Kekulu (White), Kekulu (Red)) that have 10 numbers, use the standard mapping (no special rule).
 
 ---
-### 4. FISH SECTION
+### FISH SECTION – SPECIAL RULE (OVERRIDES ALL OTHERS)
 
-For Fish, the numbers after the unit appear in pairs in this exact order:
+For **Fish items only**, the numbers after the unit **must** be parsed in pairs, in this **exact** order:
+
 1-2 → wholesale.peliyagoda (yesterday, today)
 3-4 → wholesale.negombo (yesterday, today)
 5-6 → retail.negombo (yesterday, today)
 7-8 → narahenpita (yesterday, today)
 
-If fewer than 8 numbers exist, the missing trailing positions become `null`.
+retail.pettah → ALWAYS null.
 
-**`retail.pettah` is ALWAYS `null` for ALL fish items – it is not part of the sequence.**
+**Do NOT** use the general 10‑position column order for Fish. If you see a Fish item, ignore the "FIXED COLUMN ORDER" section and apply this rule.
 
-Example:
-`Kelawalla Rs./kg 1,700.00 1,900.00 1,300.00 1,300.00 1,980.00 1,980.00 2,980.00 2,980.00`
-→ peliyagoda = (1700, 1900), negombo = (1300, 1300), retail.negombo = (1980, 1980), narahenpita = (2980, 2980).
+Examples:
 
-Apply this rule to all fish items. Do not deviate.
+- `Kelawalla Rs./kg 1,650.00 1,700.00 1,300.00 1,400.00 1,980.00 2,080.00 2,520.00 2,740.00`
+  → peliyagoda=(1650,1700), negombo=(1300,1400), retail.negombo=(1980,2080), narahenpita=(2520,2740), pettah=null.
+
+- `Thalapath Rs./kg 2,500.00 2,400.00 2,100.00 2,100.00 2,740.00 2,740.00 3,380.00 3,100.00`
+  → peliyagoda=(2500,2400), negombo=(2100,2100), retail.negombo=(2740,2740), narahenpita=(3380,3100), pettah=null.
 ----
 
 **FOR ALL OTHER ITEMS** (not listed above), use the standard mapping: numbers appear in order positions 1-10. If fewer than 10 numbers, the missing ones are null.
@@ -463,6 +466,7 @@ Apply this rule to all fish items. Do not deviate.
 - Return ONLY valid JSON. Include ALL sections and items.
 """.trimIndent()
 
+    
     val strategy = functionalStrategy<String, PriceReport> { input ->
         val fullPrompt = """
             $systemPrompt
