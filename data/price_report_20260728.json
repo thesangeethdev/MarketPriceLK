@@ -1,5 +1,5 @@
 {
-    "reportDate": "2026-07-22",
+    "reportDate": "2026-07-28",
     "summary": null,
     "sections": [
         {
@@ -10,26 +10,26 @@
                     "unit": "Rs./kg",
                     "wholesale": {
                         "pettah": {
-                            "yesterday": 250.0,
+                            "yesterday": 400.0,
                             "today": 250.0
                         },
                         "dambulla": {
-                            "yesterday": 350.0,
-                            "today": 170.0
+                            "yesterday": 375.0,
+                            "today": 250.0
                         }
                     },
                     "retail": {
                         "pettah": {
-                            "yesterday": 300.0,
+                            "yesterday": 450.0,
                             "today": 300.0
                         },
                         "dambulla": {
-                            "yesterday": 380.0,
-                            "today": 200.0
+                            "yesterday": 405.0,
+                            "today": 280.0
                         },
                         "narahenpita": {
                             "yesterday": 480.0,
-                            "today": 560.0
+                            "today": 480.0
                         }
                     }
                 },
@@ -38,22 +38,22 @@
                     "unit": "Rs./kg",
                     "wholesale": {
                         "pettah": {
-                            "yesterday": 200.0,
-                            "today": 200.0
+                            "yesterday": 280.0,
+                            "today": 250.0
                         },
                         "dambulla": {
-                            "yesterday": 280.0,
-                            "today": 225.0
+                            "yesterday": 265.0,
+                            "today": 215.0
                         }
                     },
                     "retail": {
                         "pettah": {
-                            "yesterday": 250.0,
-                            "today": 250.0
+                            "yesterday": 330.0,
+                            "today": 300.0
                         },
                         "dambulla": {
-                            "yesterday": 310.0,
-                            "today": 255.0
+                            "yesterday": 295.0,
+                            "today": 245.0
                         },
                         "narahenpita": {
                             "yesterday": 400.0,
@@ -66,26 +66,26 @@
                     "unit": "Rs./kg",
                     "wholesale": {
                         "pettah": {
-                            "yesterday": 150.0,
-                            "today": 150.0
+                            "yesterday": 100.0,
+                            "today": 100.0
                         },
                         "dambulla": {
                             "yesterday": 135.0,
-                            "today": 110.0
+                            "today": 100.0
                         }
                     },
                     "retail": {
                         "pettah": {
-                            "yesterday": 200.0,
-                            "today": 200.0
+                            "yesterday": 150.0,
+                            "today": 150.0
                         },
                         "dambulla": {
                             "yesterday": 165.0,
-                            "today": 140.0
+                            "today": 130.0
                         },
                         "narahenpita": {
                             "yesterday": 320.0,
-                            "today": 320.0
+                            "today": 340.0
                         }
                     }
                 },
@@ -95,21 +95,21 @@
                     "wholesale": {
                         "pettah": {
                             "yesterday": 400.0,
-                            "today": 400.0
+                            "today": 300.0
                         },
                         "dambulla": {
-                            "yesterday": 310.0,
-                            "today": 300.0
+                            "yesterday": 290.0,
+                            "today": 255.0
                         }
                     },
                     "retail": {
                         "pettah": {
                             "yesterday": 450.0,
-                            "today": 450.0
+                            "today": 350.0
                         },
                         "dambulla": {
-                            "yesterday": 340.0,
-                            "today": 330.0
+                            "yesterday": 320.0,
+                            "today": 285.0
                         },
                         "narahenpita": {
                             "yesterday": 480.0,
@@ -122,26 +122,26 @@
                     "unit": "Rs./kg",
                     "wholesale": {
                         "pettah": {
-                            "yesterday": 350.0,
-                            "today": 350.0
-                        },
-                        "dambulla": {
-                            "yesterday": 340.0,
-                            "today": 250.0
-                        }
-                    },
-                    "retail": {
-                        "pettah": {
                             "yesterday": 400.0,
                             "today": 400.0
                         },
                         "dambulla": {
-                            "yesterday": 370.0,
-                            "today": 280.0
+                            "yesterday": 325.0,
+                            "today": 225.0
+                        }
+                    },
+                    "retail": {
+                        "pettah": {
+                            "yesterday": 450.0,
+                            "today": 450.0
+                        },
+                        "dambulla": {
+                            "yesterday": 355.0,
+                            "today": 255.0
                         },
                         "narahenpita": {
                             "yesterday": 600.0,
-                            "today": 700.0
+                            "today": 600.0
                         }
                     }
                 },
@@ -151,21 +151,21 @@
                     "wholesale": {
                         "pettah": {
                             "yesterday": 160.0,
-                            "today": 140.0
+                            "today": 160.0
                         },
                         "dambulla": {
-                            "yesterday": 150.0,
-                            "today": 145.0
+                            "yesterday": 85.0,
+                            "today": 95.0
                         }
                     },
                     "retail": {
                         "pettah": {
                             "yesterday": 200.0,
-                            "today": 180.0
+                            "today": 200.0
                         },
                         "dambulla": {
-                            "yesterday": 180.0,
-                            "today": 175.0
+                            "yesterday": 115.0,
+                            "today": 125.0
                         },
                         "narahenpita": {
                             "yesterday": 240.0,
@@ -179,25 +179,25 @@
                     "wholesale": {
                         "pettah": {
                             "yesterday": 300.0,
-                            "today": 250.0
+                            "today": 200.0
                         },
                         "dambulla": {
-                            "yesterday": 185.0,
-                            "today": 125.0
+                            "yesterday": 125.0,
+                            "today": 115.0
                         }
                     },
                     "retail": {
                         "pettah": {
                             "yesterday": 350.0,
-                            "today": 300.0
+                            "today": 250.0
                         },
                         "dambulla": {
-                            "yesterday": 215.0,
-                            "today": 155.0
+                            "yesterday": 155.0,
+                            "today": 145.0
                         },
                         "narahenpita": {
-                            "yesterday": 360.0,
-                            "today": 360.0
+                            "yesterday": 400.0,
+                            "today": 400.0
                         }
                     }
                 },
@@ -206,25 +206,25 @@
                     "unit": "Rs./kg",
                     "wholesale": {
                         "pettah": {
-                            "yesterday": 1200.0,
-                            "today": 1100.0
+                            "yesterday": 1100.0,
+                            "today": 1300.0
                         },
                         "dambulla": {
-                            "yesterday": 1250.0,
-                            "today": 1100.0
+                            "yesterday": 1050.0,
+                            "today": 1150.0
                         }
                     },
                     "retail": {
                         "pettah": {
-                            "yesterday": 1300.0,
-                            "today": 1200.0
+                            "yesterday": 1200.0,
+                            "today": 1550.0
                         },
                         "dambulla": {
-                            "yesterday": 1280.0,
-                            "today": 1130.0
+                            "yesterday": 1080.0,
+                            "today": 1180.0
                         },
                         "narahenpita": {
-                            "yesterday": 1400.0,
+                            "yesterday": 1600.0,
                             "today": 1600.0
                         }
                     }
@@ -238,8 +238,8 @@
                             "today": 250.0
                         },
                         "dambulla": {
-                            "yesterday": 255.0,
-                            "today": 255.0
+                            "yesterday": 260.0,
+                            "today": 285.0
                         }
                     },
                     "retail": {
@@ -248,11 +248,11 @@
                             "today": 350.0
                         },
                         "dambulla": {
-                            "yesterday": 285.0,
-                            "today": 285.0
+                            "yesterday": 290.0,
+                            "today": 315.0
                         },
                         "narahenpita": {
-                            "yesterday": 700.0,
+                            "yesterday": 600.0,
                             "today": 600.0
                         }
                     }
@@ -267,22 +267,22 @@
                     "unit": "Rs./kg",
                     "wholesale": {
                         "pettah": {
-                            "yesterday": 272.0,
-                            "today": 280.0
+                            "yesterday": 300.0,
+                            "today": 312.0
                         },
                         "dambulla": {
-                            "yesterday": 260.0,
-                            "today": 265.0
+                            "yesterday": 250.0,
+                            "today": 250.0
                         }
                     },
                     "retail": {
                         "pettah": {
-                            "yesterday": 343.0,
-                            "today": 350.0
+                            "yesterday": 367.0,
+                            "today": 375.0
                         },
                         "dambulla": {
-                            "yesterday": 280.0,
-                            "today": 285.0
+                            "yesterday": 270.0,
+                            "today": 270.0
                         },
                         "narahenpita": {
                             "yesterday": null,
@@ -295,12 +295,12 @@
                     "unit": "Rs./kg",
                     "wholesale": {
                         "pettah": {
-                            "yesterday": 260.0,
-                            "today": 280.0
+                            "yesterday": 286.0,
+                            "today": 286.0
                         },
                         "dambulla": {
-                            "yesterday": 205.0,
-                            "today": 225.0
+                            "yesterday": 255.0,
+                            "today": 255.0
                         }
                     },
                     "retail": {
@@ -309,8 +309,8 @@
                             "today": 375.0
                         },
                         "dambulla": {
-                            "yesterday": 225.0,
-                            "today": 245.0
+                            "yesterday": 275.0,
+                            "today": 275.0
                         },
                         "narahenpita": {
                             "yesterday": 650.0,
@@ -351,22 +351,22 @@
                     "unit": "Rs./kg",
                     "wholesale": {
                         "pettah": {
-                            "yesterday": 163.0,
-                            "today": 175.0
+                            "yesterday": 211.0,
+                            "today": 222.0
                         },
                         "dambulla": {
-                            "yesterday": 188.0,
-                            "today": 188.0
+                            "yesterday": 165.0,
+                            "today": 175.0
                         }
                     },
                     "retail": {
                         "pettah": {
-                            "yesterday": 198.0,
-                            "today": 198.0
+                            "yesterday": 238.0,
+                            "today": 257.0
                         },
                         "dambulla": {
-                            "yesterday": 208.0,
-                            "today": 208.0
+                            "yesterday": 185.0,
+                            "today": 195.0
                         },
                         "narahenpita": {
                             "yesterday": 220.0,
@@ -380,21 +380,21 @@
                     "wholesale": {
                         "pettah": {
                             "yesterday": 328.0,
-                            "today": 328.0
+                            "today": 335.0
                         },
                         "dambulla": {
-                            "yesterday": 290.0,
-                            "today": 275.0
+                            "yesterday": 275.0,
+                            "today": 265.0
                         }
                     },
                     "retail": {
                         "pettah": {
                             "yesterday": 390.0,
-                            "today": 390.0
+                            "today": 405.0
                         },
                         "dambulla": {
-                            "yesterday": 310.0,
-                            "today": 295.0
+                            "yesterday": 295.0,
+                            "today": 285.0
                         },
                         "narahenpita": {
                             "yesterday": 350.0,
@@ -407,22 +407,22 @@
                     "unit": "Rs./kg",
                     "wholesale": {
                         "pettah": {
-                            "yesterday": 167.0,
-                            "today": 162.0
+                            "yesterday": 171.0,
+                            "today": 161.0
                         },
                         "dambulla": {
-                            "yesterday": 165.0,
-                            "today": 175.0
+                            "yesterday": 160.0,
+                            "today": 153.0
                         }
                     },
                     "retail": {
                         "pettah": {
-                            "yesterday": 210.0,
-                            "today": 207.0
+                            "yesterday": 203.0,
+                            "today": 205.0
                         },
                         "dambulla": {
-                            "yesterday": 185.0,
-                            "today": 195.0
+                            "yesterday": 180.0,
+                            "today": 173.0
                         },
                         "narahenpita": {
                             "yesterday": 220.0,
@@ -435,8 +435,8 @@
                     "unit": "Rs./kg",
                     "wholesale": {
                         "pettah": {
-                            "yesterday": 1078.0,
-                            "today": 1072.0
+                            "yesterday": 1062.0,
+                            "today": 1068.0
                         },
                         "dambulla": {
                             "yesterday": 1075.0,
@@ -446,7 +446,7 @@
                     "retail": {
                         "pettah": {
                             "yesterday": 1167.0,
-                            "today": 1167.0
+                            "today": 1150.0
                         },
                         "dambulla": {
                             "yesterday": 1105.0,
@@ -463,21 +463,21 @@
                     "unit": "Rs./Nut",
                     "wholesale": {
                         "pettah": {
-                            "yesterday": 123.0,
-                            "today": 123.0
+                            "yesterday": 127.0,
+                            "today": 130.0
                         },
                         "dambulla": {
-                            "yesterday": 115.0,
+                            "yesterday": 103.0,
                             "today": 105.0
                         }
                     },
                     "retail": {
                         "pettah": {
                             "yesterday": 153.0,
-                            "today": 157.0
+                            "today": 160.0
                         },
                         "dambulla": {
-                            "yesterday": 120.0,
+                            "yesterday": 108.0,
                             "today": 110.0
                         },
                         "narahenpita": {
@@ -492,14 +492,14 @@
                     "wholesale": {
                         "pettah": {
                             "yesterday": 802.0,
-                            "today": 802.0
+                            "today": 808.0
                         },
                         "dambulla": null
                     },
                     "retail": {
                         "pettah": {
                             "yesterday": 884.0,
-                            "today": 884.0
+                            "today": 860.0
                         },
                         "dambulla": null,
                         "narahenpita": {
@@ -514,14 +514,14 @@
                     "wholesale": {
                         "pettah": {
                             "yesterday": 230.0,
-                            "today": 230.0
+                            "today": 225.0
                         },
                         "dambulla": null
                     },
                     "retail": {
                         "pettah": {
                             "yesterday": 247.0,
-                            "today": 247.0
+                            "today": 250.0
                         },
                         "dambulla": null,
                         "narahenpita": {
@@ -542,7 +542,7 @@
                     },
                     "retail": {
                         "pettah": {
-                            "yesterday": 225.0,
+                            "yesterday": 228.0,
                             "today": 225.0
                         },
                         "dambulla": null,
@@ -558,14 +558,14 @@
                     "wholesale": {
                         "pettah": {
                             "yesterday": 40.0,
-                            "today": 39.0
+                            "today": 40.0
                         },
                         "dambulla": null
                     },
                     "retail": {
                         "pettah": {
                             "yesterday": 41.0,
-                            "today": 41.0
+                            "today": 42.0
                         },
                         "dambulla": null,
                         "narahenpita": {
@@ -579,15 +579,15 @@
                     "unit": "Rs./kg",
                     "wholesale": {
                         "pettah": {
-                            "yesterday": 2138.0,
-                            "today": 2213.0
+                            "yesterday": 2163.0,
+                            "today": 2188.0
                         },
                         "dambulla": null
                     },
                     "retail": {
                         "pettah": {
-                            "yesterday": 2817.0,
-                            "today": 2850.0
+                            "yesterday": 2767.0,
+                            "today": 2800.0
                         },
                         "dambulla": null,
                         "narahenpita": {
@@ -601,15 +601,15 @@
                     "unit": "Rs./kg",
                     "wholesale": {
                         "pettah": {
-                            "yesterday": 1330.0,
-                            "today": 1370.0
+                            "yesterday": 1350.0,
+                            "today": 1400.0
                         },
                         "dambulla": null
                     },
                     "retail": {
                         "pettah": {
-                            "yesterday": 1625.0,
-                            "today": 1600.0
+                            "yesterday": 1633.0,
+                            "today": 1550.0
                         },
                         "dambulla": null,
                         "narahenpita": {
@@ -632,7 +632,7 @@
                             "today": 150.0
                         },
                         "dambulla": {
-                            "yesterday": 115.0,
+                            "yesterday": 105.0,
                             "today": 105.0
                         }
                     },
@@ -642,12 +642,12 @@
                             "today": 200.0
                         },
                         "dambulla": {
-                            "yesterday": 145.0,
+                            "yesterday": 135.0,
                             "today": 135.0
                         },
                         "narahenpita": {
-                            "yesterday": 260.0,
-                            "today": 260.0
+                            "yesterday": 290.0,
+                            "today": 290.0
                         }
                     }
                 },
@@ -660,8 +660,8 @@
                             "today": 120.0
                         },
                         "dambulla": {
-                            "yesterday": 75.0,
-                            "today": 70.0
+                            "yesterday": 90.0,
+                            "today": 155.0
                         }
                     },
                     "retail": {
@@ -670,8 +670,8 @@
                             "today": 170.0
                         },
                         "dambulla": {
-                            "yesterday": 105.0,
-                            "today": 100.0
+                            "yesterday": 120.0,
+                            "today": 185.0
                         },
                         "narahenpita": {
                             "yesterday": 240.0,
@@ -688,22 +688,22 @@
                             "today": null
                         },
                         "dambulla": {
-                            "yesterday": 305.0,
-                            "today": 325.0
+                            "yesterday": 365.0,
+                            "today": 365.0
                         }
                     },
                     "retail": {
                         "pettah": {
-                            "yesterday": 350.0,
+                            "yesterday": 325.0,
                             "today": 325.0
                         },
                         "dambulla": {
-                            "yesterday": 335.0,
-                            "today": 355.0
+                            "yesterday": 395.0,
+                            "today": 395.0
                         },
                         "narahenpita": {
-                            "yesterday": 440.0,
-                            "today": 440.0
+                            "yesterday": 460.0,
+                            "today": 460.0
                         }
                     }
                 },
@@ -755,17 +755,17 @@
                     "unit": "Rs./kg",
                     "wholesale": {
                         "pettah": {
-                            "yesterday": 243.0,
-                            "today": 243.0
+                            "yesterday": 242.0,
+                            "today": 242.0
                         },
                         "marandagahamula": {
-                            "yesterday": 242.0,
-                            "today": 240.0
+                            "yesterday": 241.0,
+                            "today": 241.0
                         }
                     },
                     "retail": {
                         "pettah": {
-                            "yesterday": 245.0,
+                            "yesterday": 250.0,
                             "today": 250.0
                         },
                         "dambulla": {
@@ -783,17 +783,17 @@
                     "unit": "Rs./kg",
                     "wholesale": {
                         "pettah": {
-                            "yesterday": 200.0,
+                            "yesterday": 203.0,
                             "today": 203.0
                         },
                         "marandagahamula": {
-                            "yesterday": 195.0,
-                            "today": 195.0
+                            "yesterday": 194.0,
+                            "today": 197.0
                         }
                     },
                     "retail": {
                         "pettah": {
-                            "yesterday": 220.0,
+                            "yesterday": 223.0,
                             "today": 223.0
                         },
                         "dambulla": {
@@ -815,14 +815,14 @@
                             "today": 193.0
                         },
                         "marandagahamula": {
-                            "yesterday": 183.0,
-                            "today": 183.0
+                            "yesterday": 190.0,
+                            "today": 190.0
                         }
                     },
                     "retail": {
                         "pettah": {
-                            "yesterday": 197.0,
-                            "today": 205.0
+                            "yesterday": 210.0,
+                            "today": 210.0
                         },
                         "dambulla": {
                             "yesterday": 200.0,
@@ -849,7 +849,7 @@
                     },
                     "retail": {
                         "pettah": {
-                            "yesterday": 193.0,
+                            "yesterday": 197.0,
                             "today": 197.0
                         },
                         "dambulla": {
@@ -857,7 +857,7 @@
                             "today": 184.0
                         },
                         "narahenpita": {
-                            "yesterday": 180.0,
+                            "yesterday": 190.0,
                             "today": 190.0
                         }
                     }
@@ -867,7 +867,7 @@
                     "unit": "Rs./kg",
                     "wholesale": {
                         "pettah": {
-                            "yesterday": 237.0,
+                            "yesterday": 235.0,
                             "today": 235.0
                         },
                         "marandagahamula": {
@@ -877,7 +877,7 @@
                     },
                     "retail": {
                         "pettah": {
-                            "yesterday": 250.0,
+                            "yesterday": 253.0,
                             "today": 253.0
                         },
                         "dambulla": null,
@@ -948,21 +948,21 @@
                     "wholesale": {
                         "peliyagoda": {
                             "yesterday": 1700.0,
-                            "today": 1900.0
+                            "today": 1700.0
                         },
                         "negombo": {
-                            "yesterday": 1300.0,
-                            "today": 1300.0
+                            "yesterday": 1400.0,
+                            "today": 1400.0
                         }
                     },
                     "retail": {
                         "negombo": {
-                            "yesterday": 1980.0,
-                            "today": 1980.0
+                            "yesterday": 2080.0,
+                            "today": 2100.0
                         },
                         "narahenpita": {
-                            "yesterday": 2980.0,
-                            "today": 2980.0
+                            "yesterday": 2740.0,
+                            "today": 2840.0
                         }
                     }
                 },
@@ -971,8 +971,8 @@
                     "unit": "Rs./kg",
                     "wholesale": {
                         "peliyagoda": {
-                            "yesterday": 2500.0,
-                            "today": 2700.0
+                            "yesterday": 2400.0,
+                            "today": null
                         },
                         "negombo": {
                             "yesterday": 2100.0,
@@ -981,12 +981,12 @@
                     },
                     "retail": {
                         "negombo": {
-                            "yesterday": 2840.0,
+                            "yesterday": 2740.0,
                             "today": 2840.0
                         },
                         "narahenpita": {
-                            "yesterday": null,
-                            "today": 3280.0
+                            "yesterday": 3100.0,
+                            "today": 2880.0
                         }
                     }
                 },
@@ -995,22 +995,22 @@
                     "unit": "Rs./kg",
                     "wholesale": {
                         "peliyagoda": {
-                            "yesterday": null,
+                            "yesterday": 1000.0,
                             "today": 1100.0
                         },
                         "negombo": {
-                            "yesterday": 1000.0,
-                            "today": 840.0
+                            "yesterday": 1250.0,
+                            "today": 1250.0
                         }
                     },
                     "retail": {
                         "negombo": {
-                            "yesterday": 1280.0,
-                            "today": 1050.0
+                            "yesterday": 1520.0,
+                            "today": 1520.0
                         },
                         "narahenpita": {
-                            "yesterday": 1560.0,
-                            "today": 1280.0
+                            "yesterday": 1120.0,
+                            "today": 1120.0
                         }
                     }
                 },
@@ -1019,22 +1019,22 @@
                     "unit": "Rs./kg",
                     "wholesale": {
                         "peliyagoda": {
-                            "yesterday": 1700.0,
-                            "today": 1700.0
+                            "yesterday": 1600.0,
+                            "today": 1600.0
                         },
                         "negombo": {
-                            "yesterday": 1600.0,
-                            "today": null
+                            "yesterday": null,
+                            "today": 1520.0
                         }
                     },
                     "retail": {
                         "negombo": {
-                            "yesterday": 2700.0,
-                            "today": null
+                            "yesterday": null,
+                            "today": 1960.0
                         },
                         "narahenpita": {
-                            "yesterday": 2160.0,
-                            "today": 2040.0
+                            "yesterday": null,
+                            "today": 1680.0
                         }
                     }
                 },
@@ -1043,22 +1043,22 @@
                     "unit": "Rs./kg",
                     "wholesale": {
                         "peliyagoda": {
-                            "yesterday": 900.0,
-                            "today": 900.0
+                            "yesterday": 700.0,
+                            "today": 750.0
                         },
                         "negombo": {
-                            "yesterday": 830.0,
-                            "today": 840.0
+                            "yesterday": 780.0,
+                            "today": 750.0
                         }
                     },
                     "retail": {
                         "negombo": {
-                            "yesterday": 1040.0,
-                            "today": 1050.0
+                            "yesterday": 980.0,
+                            "today": 980.0
                         },
                         "narahenpita": {
-                            "yesterday": null,
-                            "today": 1060.0
+                            "yesterday": 860.0,
+                            "today": 720.0
                         }
                     }
                 },
@@ -1067,22 +1067,22 @@
                     "unit": "Rs./kg",
                     "wholesale": {
                         "peliyagoda": {
-                            "yesterday": null,
-                            "today": 1300.0
+                            "yesterday": 1100.0,
+                            "today": 1200.0
                         },
                         "negombo": {
-                            "yesterday": 1300.0,
-                            "today": 1000.0
+                            "yesterday": 1200.0,
+                            "today": 1200.0
                         }
                     },
                     "retail": {
                         "negombo": {
-                            "yesterday": 1640.0,
-                            "today": 1320.0
+                            "yesterday": 1460.0,
+                            "today": 1480.0
                         },
                         "narahenpita": {
-                            "yesterday": null,
-                            "today": null
+                            "yesterday": 1520.0,
+                            "today": 1500.0
                         }
                     }
                 },
@@ -1091,22 +1091,22 @@
                     "unit": "Rs./kg",
                     "wholesale": {
                         "peliyagoda": {
-                            "yesterday": 850.0,
-                            "today": 850.0
+                            "yesterday": 650.0,
+                            "today": 650.0
                         },
                         "negombo": {
-                            "yesterday": 850.0,
-                            "today": 820.0
+                            "yesterday": 670.0,
+                            "today": 620.0
                         }
                     },
                     "retail": {
                         "negombo": {
-                            "yesterday": 1060.0,
-                            "today": 980.0
+                            "yesterday": 780.0,
+                            "today": 780.0
                         },
                         "narahenpita": {
-                            "yesterday": 980.0,
-                            "today": 1040.0
+                            "yesterday": 840.0,
+                            "today": 820.0
                         }
                     }
                 }
