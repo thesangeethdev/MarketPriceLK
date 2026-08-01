@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: market-prices-lk
+    runtime: docker
+    plan: free
+    envVars:
+      - key: PORT
+        value: 8080
+    healthCheckPath: /
+
+  - type: cron
+    name: daily-price-fetch
+    runtime: docker
+    plan: free
+    schedule: "30 3 * * *"
+    envVars:
+      - key: TARGET_URL
+        value: https://market-prices-lk.onrender.com/run-now
+    dockerCommand: sh -c "curl -s $TARGET_URL"

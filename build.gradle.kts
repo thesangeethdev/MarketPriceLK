@@ -35,4 +35,19 @@ dependencies {
     implementation("io.ktor:ktor-serialization-kotlinx-json:3.0.0")
     implementation("io.ktor:ktor-client-cio:3.5.0")
 
+    implementation("io.ktor:ktor-server-core-jvm")
+    implementation("io.ktor:ktor-server-cio-jvm")
+    implementation("io.ktor:ktor-server-content-negotiation-jvm")
+    implementation("io.ktor:ktor-serialization-kotlinx-json-jvm")
+
+    // Ktor client (for fetching PDF)
+    implementation("io.ktor:ktor-client-core-jvm")
+    implementation("io.ktor:ktor-client-cio-jvm")
+
+    // Scheduling
+    implementation("org.quartz-scheduler:quartz:2.3.2")
+
+    // Logging
+    implementation("ch.qos.logback:logback-classic:1.5.6")
+
 }
