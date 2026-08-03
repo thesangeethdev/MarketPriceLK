@@ -18,7 +18,6 @@ import kotlinx.serialization.json.Json
 import java.io.File
 import java.time.LocalDate
 import java.time.ZoneId
-//test commit
 fun main(args: Array<String>) {
     DailySchedular.start()
     EngineMain.main(args)

@@ -8,7 +8,6 @@
 
 ## Local Development
 
-```bash
 # Clone
 git clone https://github.com/thesangeethdev/MarketPriceLK.git
 cd MarketPriceLK
