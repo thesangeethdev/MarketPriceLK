@@ -1,33 +1,47 @@
-# market-prices-lk
+# MarketPriceLK
 
-This project was created using the [Ktor Project Generator](https://start.ktor.io).
+Daily Sri Lankan market price reports from the Central Bank of Sri Lanka (CBSL).
 
-Here are some useful links to get you started:
+## Overview
 
-* [Ktor Documentation](https://ktor.io/docs/home.html)
-* [Ktor GitHub page](https://github.com/ktorio/ktor)
-* [Ktor Slack chat](https://app.slack.com/client/T09229ZC6/C0A974TJ9). [Request an invite](https://surveys.jetbrains.com/s3/kotlin-slack-sign-up).
+MarketPriceLK fetches daily price reports (PDF) from CBSL, parses them, and exposes the data via a REST API. The service runs on Render with scheduled daily updates at 9:00 AM Sri Lanka time.
 
 ## Features
 
-Here's a list of features included in this project:
+- **Daily automatic fetching** — CBSL price reports fetched every day at 9:00 AM (Asia/Colombo)
+- **REST API** — JSON endpoints for latest and historical price data
+- **Backfill support** — Fetches last 3 available days on demand
+- **Free hosting** — Runs on Render free tier with cron-job.org scheduling
 
-| Name | Description |
-|------|-------------|
+## API Endpoints
 
-## Building & Running
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/` | GET | Health check / welcome message |
+| `/latest` | GET | Latest available price report (JSON) |
+| `/reports` | GET | List all available report dates |
+| `/reports/{date}` | GET | Specific date's report (YYYYMMDD) |
+| `/history` | GET | Last 3 reports combined (JSON) |
+| `/run-now` | GET | Manually trigger fetch for today |
+| `/backfill` | GET | Fetch last 3 available days |
 
-To build or run the project, use one of the following tasks:
+## Tech Stack
+- Kotlin + Ktor — Backend framework
+- Render — Free cloud hosting
+- cron-job.org — Free cron scheduling
+- CBSL — Data source (Daily Price Report PDFs)
 
-| Task              | Description       |
-|-------------------|-------------------|
-| `./gradlew test`  | Run the tests     |
-| `./gradlew build` | Build the project |
-| `./gradlew run`   | Run the server    |
+## Quick Start
 
-If the server starts successfully, you'll see the following output:
+```bash
+# Get latest report
+curl https://market-prices-lk.onrender.com/latest
 
-```
-2024-12-04 14:32:45.584 [main] INFO  Application - Application started in 0.303 seconds.
-2024-12-04 14:32:45.682 [main] INFO  Application - Responding at http://0.0.0.0:8080
-```
+# List available dates
+curl https://market-prices-lk.onrender.com/reports
+
+# Get specific date
+curl https://market-prices-lk.onrender.com/reports/20260731
+
+# Trigger manual fetch
+curl https://market-prices-lk.onrender.com/run-now
