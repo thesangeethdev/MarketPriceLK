@@ -13,7 +13,7 @@ MarketPriceLK automatically fetches daily price reports published by CBSL, parse
 - [Self-Hosting Setup](setup.md)
 
 ## Base URL
-[https://market-prices-lk.onrender.com]()
+[https://market-prices-lk.onrender.com](https://market-prices-lk.onrender.com)
 
 
 ## Daily Schedule
