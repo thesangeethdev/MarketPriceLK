@@ -1,7 +1,9 @@
 package com.sangeeth
 
+import ai.koog.serialization.kotlinx.KotlinxSerializer
 import io.github.jan.supabase.SupabaseClient
 import io.github.jan.supabase.createSupabaseClient
+import io.github.jan.supabase.postgrest.Postgrest
 import io.github.jan.supabase.postgrest.postgrest
 import io.github.jan.supabase.postgrest.query.Order
 import kotlinx.serialization.Serializable
@@ -13,7 +15,7 @@ val supabase: SupabaseClient by lazy {
         supabaseUrl = System.getenv("SUPABASE_URL") ?: error("SUPABASE_URL not set"),
         supabaseKey = System.getenv("SUPABASE_KEY") ?: error("SUPABASE_KEY not set")
     ) {
-        install(io.github.jan.supabase.postgrest.Postgrest)
+        install(Postgrest)
     }
 }
 
