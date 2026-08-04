@@ -4,6 +4,7 @@ import ai.koog.serialization.kotlinx.KotlinxSerializer
 import io.github.jan.supabase.SupabaseClient
 import io.github.jan.supabase.createSupabaseClient
 import io.github.jan.supabase.postgrest.Postgrest
+import io.github.jan.supabase.postgrest.from
 import io.github.jan.supabase.postgrest.postgrest
 import io.github.jan.supabase.postgrest.query.Order
 import kotlinx.serialization.Serializable
@@ -28,15 +29,14 @@ data class SupabasePriceReport(
 
 suspend fun saveReportToDb(date: String, jsonData: String) {
     val jsonElement = Json.parseToJsonElement(jsonData)
-    supabase.postgrest["price_reports"]
-        .upsert(
+    supabase.from("price_reports")
+        .insert(
             SupabasePriceReport(date = date, data = jsonElement),
-            onConflict = "date"
         )
 }
 
 suspend fun getLatestReportFromDb(): SupabasePriceReport? {
-    return supabase.postgrest["price_reports"]
+    return supabase.from("price_reports")
         .select {
             order(
                 "date",
@@ -48,7 +48,7 @@ suspend fun getLatestReportFromDb(): SupabasePriceReport? {
 }
 
 suspend fun getReportFromDb(date: String): SupabasePriceReport?{
-    return supabase.postgrest["price_reports"]
+    return supabase.from("price_reports")
         .select {
             filter {
                 eq("date", date)
@@ -58,7 +58,7 @@ suspend fun getReportFromDb(date: String): SupabasePriceReport?{
 }
 
 suspend fun getAllReportsFromDb(): List<SupabasePriceReport>{
-    return supabase.postgrest["price_reports"]
+    return supabase.from("price_reports")
         .select {
             order("date", Order.DESCENDING)
             limit(10)
