@@ -13,7 +13,8 @@ suspend fun processDate(date: LocalDate) {
     val report = parsePriceReport(pdf, date.toString())
     val finalJson = report.toJson()
 
-    saveReport(date, finalJson)
+    saveReportPersistent(date, finalJson)
+//    saveReport(date, finalJson)
     cleanupOldReports()
 
     println("Saved report for $date")

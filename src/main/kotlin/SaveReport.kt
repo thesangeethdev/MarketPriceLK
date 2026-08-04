@@ -14,6 +14,12 @@ fun saveReport(date: LocalDate, json: String) {
     println("Saved: ${file.absolutePath}")
 }
 
+suspend fun saveReportPersistent(date: LocalDate, json: String){
+    val dateStr = date.format(DateTimeFormatter.ofPattern("yyyyMMdd"))
+    saveReport(date, json)
+    saveReportToDb(dateStr, json)
+    println("saved to supabase: $dateStr")
+}
 fun cleanupOldReports(keepDays: Int = 3) {
     val dataDir = File("data")
     if (!dataDir.exists() || !dataDir.isDirectory) return

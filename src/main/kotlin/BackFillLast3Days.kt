@@ -2,6 +2,7 @@ package com.sangeeth
 
 import java.time.LocalDate
 import java.time.ZoneId
+import java.time.format.DateTimeFormatter
 
 suspend fun backFillLast3Days() {
     val zone = ZoneId.of("Asia/Colombo")
@@ -17,7 +18,11 @@ suspend fun backFillLast3Days() {
             println("Found PDF for $date")
             val report = parsePriceReport(pdf, date.toString())
             val finalJson = report.toJson()
-            saveReport(date, finalJson)
+//            saveReport(date, finalJson)
+//            saveReportToDb(
+//                date,finalJson
+//            )
+            saveReportPersistent(date, finalJson)
             count++
         } else {
             println("No PDF for $date")
