@@ -50,4 +50,6 @@ dependencies {
     // Logging
     implementation("ch.qos.logback:logback-classic:1.5.6")
 
+    //supabase
+    implementation("io.github.jan-tennert.supabase:postgrest-kt:2.6.1")
 }

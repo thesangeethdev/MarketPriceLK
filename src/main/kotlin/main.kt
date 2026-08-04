@@ -42,6 +42,17 @@ fun Application.module() {
         }
 
         get("/latest"){
+
+            //supabase first
+            val report = getLatestReportFromDb()
+            if (report != null){
+                call.respondText(
+                    Json.encodeToString(report.data),
+                    contentType = ContentType.Application.Json
+                )
+                return@get
+            }
+
             val dir = File("data")
             val latestFile = dir.listFiles { f -> f.name.endsWith(".json") }
                 ?.maxByOrNull { it.name }
@@ -58,6 +69,16 @@ fun Application.module() {
             )
         }
         get("/reports"){
+
+            //supabase first
+            val dbReports = getAllReportsFromDb()
+            if (dbReports.isNotEmpty()){
+                val names = dbReports.map { "price_report_${it.date}.json" }
+                call.respondText(names.joinToString("\n"))
+                return@get
+            }
+
+
             val dir = File("data")
             val files = if (dir.exists()){
                 dir.listFiles{file -> file.name.endsWith(".json")}?.map {
@@ -76,6 +97,17 @@ fun Application.module() {
                 )
             }
 
+            // supabase first
+            val report = getReportFromDb(date)
+            if (report != null){
+                call.respondText(
+                    Json.encodeToString(report.data),
+                    contentType = ContentType.Application.Json
+                )
+                return@get
+            }
+
+
             val file = File("data/price_report_$date.json")
             if (!file.exists()){
                 return@get call.respondText(
@@ -90,6 +122,21 @@ fun Application.module() {
         }
 
         get("/history") {
+
+            // supabase first
+            val dbreports = getAllReportsFromDb().take(3)
+            if (dbreports.isNotEmpty()){
+                val combined = dbreports.map { report ->
+                    """{"date":"${report.date}","data":${Json.encodeToString(report.data)}}"""
+                }
+                call.respondText(
+                    "[" + combined.joinToString(",") + "]",
+                    contentType = ContentType.Application.Json
+                )
+                return@get
+            }
+
+
             val dir = File("data")
             val reports = dir.listFiles { f -> f.name.endsWith(".json") }
                 ?.sortedByDescending { it.name }
