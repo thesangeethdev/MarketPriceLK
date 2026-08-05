@@ -46,8 +46,12 @@ fun Application.module() {
             //supabase first
             val report = getLatestReportFromDb()
             if (report != null){
+                val response = mapOf(
+                    "date" to report.date,
+                    "data" to report.data
+                )
                 call.respondText(
-                    Json.encodeToString(report.data),
+                    Json.encodeToString(response),
                     contentType = ContentType.Application.Json
                 )
                 return@get
@@ -63,11 +67,19 @@ fun Application.module() {
                 )
             }
 
+            val date = latestFile.name.removePrefix("price_report_").removeSuffix(".json")
+            val jsonContent = latestFile.readText()
+            val response = mapOf(
+                "date" to date,
+                "data" to Json.parseToJsonElement(jsonContent)
+            )
+
             call.respondText(
-                latestFile.readText(),
+                Json.encodeToString(response),
                 contentType = ContentType.Application.Json
             )
         }
+
         get("/reports"){
 
             //supabase first
@@ -100,8 +112,13 @@ fun Application.module() {
             // supabase first
             val report = getReportFromDb(date)
             if (report != null){
+                val response = mapOf(
+                    "date" to report.date,
+                    "data" to report.data
+                )
+
                 call.respondText(
-                    Json.encodeToString(report.data),
+                    Json.encodeToString(response),
                     contentType = ContentType.Application.Json
                 )
                 return@get
@@ -115,8 +132,13 @@ fun Application.module() {
                     status = HttpStatusCode.NotFound
                 )
             }
+            val jsonContent = file.readText()
+            val response = mapOf(
+                "date" to date,
+                "data" to Json.parseToJsonElement(jsonContent)
+            )
             call.respondText(
-                file.readText(),
+                Json.encodeToString(response),
                 contentType = ContentType.Application.Json
             )
         }
