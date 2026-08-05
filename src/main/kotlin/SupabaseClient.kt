@@ -28,11 +28,15 @@ data class SupabasePriceReport(
 
 
 suspend fun saveReportToDb(date: String, jsonData: String) {
-    val jsonElement = Json.parseToJsonElement(jsonData)
+    val jsonElement = kotlinx.serialization.json.Json.parseToJsonElement(jsonData)
+
     supabase.from("price_reports")
-        .insert(
-            SupabasePriceReport(date = date, data = jsonElement),
-        )
+        .delete {
+            filter { eq("date", date) }
+        }
+
+    supabase.from("price_reports")
+        .insert(SupabasePriceReport(date = date, data = jsonElement))
 }
 
 suspend fun getLatestReportFromDb(): SupabasePriceReport? {

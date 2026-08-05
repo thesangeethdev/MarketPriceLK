@@ -1,5 +1,6 @@
 package com.sangeeth
 
+import io.github.jan.supabase.postgrest.from
 import java.io.File
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
@@ -20,7 +21,7 @@ suspend fun saveReportPersistent(date: LocalDate, json: String){
     saveReportToDb(dateStr, json)
     println("saved to supabase: $dateStr")
 }
-fun cleanupOldReports(keepDays: Int = 3) {
+suspend fun cleanupOldReports(keepDays: Int = 3) {
     val dataDir = File("data")
     if (!dataDir.exists() || !dataDir.isDirectory) return
 
@@ -46,6 +47,20 @@ fun cleanupOldReports(keepDays: Int = 3) {
         filesWithDates.drop(keepDays).forEach { (file, date) ->
             file.delete()
             println("Deleted old report: ${file.name} ($date)")
+        }
+    }
+
+    val allReports = getAllReportsFromDb()
+    if (allReports.size>keepDays){
+        val toDelete = allReports.drop(keepDays)
+        toDelete.forEach { report ->
+            supabase.from("price_reports")
+                .delete {
+                    filter {
+                        eq("date", report.date)
+                    }
+                }
+            println("Deleted old Supabase report: ${report.date}")
         }
     }
 }
