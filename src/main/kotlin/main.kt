@@ -46,9 +46,9 @@ fun Application.module() {
             //supabase first
             val report = getLatestReportFromDb()
             if (report != null){
-                val response = mapOf(
-                    "date" to report.date,
-                    "data" to report.data
+                val response = LatestReportResponse(
+                    date = report.date,
+                    data = report.data
                 )
                 call.respondText(
                     Json.encodeToString(response),
@@ -69,9 +69,9 @@ fun Application.module() {
 
             val date = latestFile.name.removePrefix("price_report_").removeSuffix(".json")
             val jsonContent = latestFile.readText()
-            val response = mapOf(
-                "date" to date,
-                "data" to Json.parseToJsonElement(jsonContent)
+            val response = LatestReportResponse(
+                date = date,
+                data = Json.parseToJsonElement(jsonContent)
             )
 
             call.respondText(
@@ -101,9 +101,9 @@ fun Application.module() {
         }
 
         get("/reports/{date}"){
-            val date = call.parameters["date"] ?: return@get
+            val date = call.parameters["date"]
             if (date == null){
-                call.respondText(
+                return@get call.respondText(
                     "Missing date. Format YYYYMMDD",
                     status = HttpStatusCode.BadRequest
                 )
@@ -112,9 +112,9 @@ fun Application.module() {
             // supabase first
             val report = getReportFromDb(date)
             if (report != null){
-                val response = mapOf(
-                    "date" to report.date,
-                    "data" to report.data
+                val response = LatestReportResponse(
+                    date = report.date,
+                    data = report.data
                 )
 
                 call.respondText(
