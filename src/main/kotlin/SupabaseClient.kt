@@ -21,6 +21,11 @@ val supabase: SupabaseClient by lazy {
 }
 
 @Serializable
+data class LatestReportResponse(
+    val date: String,
+    val data: JsonElement
+)
+@Serializable
 data class SupabasePriceReport(
     val date: String,
     val data: JsonElement
