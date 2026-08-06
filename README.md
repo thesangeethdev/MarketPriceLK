@@ -22,8 +22,6 @@ MarketPriceLK fetches daily price reports (PDF) from CBSL, parses them, and expo
 | `/reports` | GET | List all available report dates |
 | `/reports/{date}` | GET | Specific date's report (YYYYMMDD) |
 | `/history` | GET | Last 3 reports combined (JSON) |
-| `/run-now` | GET | Manually trigger fetch for today |
-| `/backfill` | GET | Fetch last 3 available days |
 
 ## Tech Stack
 - Kotlin + Ktor — Backend framework
