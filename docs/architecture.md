@@ -2,13 +2,13 @@
 
 ## Data Flow
 CBSL Website (PDF)
-↓
+->
 fetchPdfForDate() — HTTP client with retries
-↓
+->
 parsePriceReport() — PDF parsing
-↓
+->
 saveReport() — JSON to disk
-↓
+->
 Ktor API — Serve JSON
 
 
