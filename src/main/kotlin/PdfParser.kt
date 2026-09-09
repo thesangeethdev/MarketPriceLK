@@ -1,6 +1,7 @@
 package com.sangeeth
 
 import org.apache.pdfbox.Loader
+import org.apache.pdfbox.pdmodel.PDDocument
 import org.apache.pdfbox.text.PDFTextStripper
 import org.apache.pdfbox.text.TextPosition
 
@@ -40,17 +41,58 @@ class WordExtractor : PDFTextStripper() {
     }
 }
 
-fun extractTableText(pdfBytes: ByteArray): List<String> {
-    val doc = Loader.loadPDF(pdfBytes)
-    try {
-        val extractor = WordExtractor()
-        extractor.startPage = 2
-        extractor.endPage = 2
-        extractor.getText(doc)
-        return extractor.getLines()
-    } finally {
-        doc.close()
+private fun extractTableLines(doc: PDDocument): List<String> {
+    val extractor = WordExtractor()
+    extractor.startPage = 2
+    extractor.endPage = 2
+    extractor.getText(doc)
+    return extractor.getLines()
+}
+
+private fun extractSummary(doc: PDDocument): String {
+    val stripper = PDFTextStripper()
+    stripper.startPage = 1
+    stripper.endPage = 1
+    val text = stripper.getText(doc)
+
+    val entries = mutableListOf<String>()
+    val current = StringBuilder()
+    var descDone = false
+    var inPrices = false
+
+    for (line in text.lines()) {
+        val trimmed = line.trim()
+        if (trimmed.isEmpty()) continue
+
+        when {
+            trimmed.startsWith("Price of") || trimmed.startsWith("Wholesale price of") -> {
+                if (current.isNotEmpty()) entries.add(current.toString().trim())
+                current.clear()
+                descDone = false
+                inPrices = false
+                current.append(trimmed).append(" ")
+                if (trimmed.endsWith(".")) descDone = true
+            }
+            current.isNotEmpty() && descDone &&
+                    (trimmed == "q" || trimmed == "p" || trimmed.startsWith("q ") || trimmed.startsWith("p ")) -> {
+                val arrow = if (trimmed.startsWith("q") || trimmed == "q") "↓" else "↑"
+                current.append("\n").append(arrow)
+                if (trimmed.length > 1) current.append(trimmed.substring(1))
+                inPrices = true
+            }
+            inPrices && trimmed.endsWith(":") -> current.append(" ").append(trimmed)
+            inPrices && trimmed.matches(Regex("""[\d,]+\.\d{2}""")) -> current.append(" ").append(trimmed)
+            current.isNotEmpty() && !descDone
+                    && !trimmed.startsWith("Rs./")
+                    && !trimmed.matches(Regex("[0-9,.].*")) -> {
+                current.append(trimmed).append(" ")
+                if (trimmed.endsWith(".")) descDone = true
+            }
+        }
     }
+    if (current.isNotEmpty()) entries.add(current.toString().trim())
+
+    return entries.joinToString("\n")
 }
 
 private val VEGETABLE_ITEMS = setOf(
@@ -88,7 +130,15 @@ private val SPECIAL_RICE_ITEMS = setOf(
 )
 
 fun parsePriceReport(pdfBytes: ByteArray, reportDate: String): PriceReport {
-    val lines = extractTableText(pdfBytes)
+    val doc = Loader.loadPDF(pdfBytes)
+    val lines: List<String>
+    val summary: String
+    try {
+        lines = extractTableLines(doc)
+        summary = extractSummary(doc)
+    } finally {
+        doc.close()
+    }
 
     val allItems = mutableMapOf<String, Item>()
 
@@ -114,7 +164,7 @@ fun parsePriceReport(pdfBytes: ByteArray, reportDate: String): PriceReport {
 
     return PriceReport(
         reportDate = reportDate,
-        summary = null,
+        summary = summary.ifEmpty { null },
         sections = listOf(
             Section("Vegetables", vegItems),
             Section("Other", otherItems),
