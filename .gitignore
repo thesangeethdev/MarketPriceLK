@@ -5,3 +5,5 @@ build/
 *.class
 *.jar
 !gradle/wrapper/gradle-wrapper.jar
+price_report_20260722_e.pdf
+price_report_20260727_e.pdf
